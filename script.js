@@ -25,4 +25,22 @@ function reverseString(str){
     return str.split(" ").reverse().join(" ");
 }
 
-// we can reduce the amount of code simply by using methode chaining...
+// 4.) Using the JavaScript language, have the function LetterChanges(str) take the str parameter being passed and modify it using the following algorithm.
+// Replace every letter in the string with the letter following it in the alphabet (ie. c becomes d, z becomes a). Then capitalize every vowel in this new string (a, e, i, o, u) and finally return this modified string. 
+
+function LetterChanges(str){
+    let changedStr = "";
+    for(i=0;i<=str.length;i++){
+        if(str.charCodeAt(i) > 94 && str.charCodeAt(i) < 122){
+            changedStr = str.replace(charCodeAt(i), String.fromCharCode(i+1));
+        } else if (str.charCodeAt(i)=== 122) {
+            changedStr = str.replace(str.charCodeAt(i), str.charCodeAt(95));
+        }
+    }
+    for(i=0;i<=changedStr.length;i++){
+        if(changedStr.charCodeAt(i)===95||changedStr.charCodeAt(i)===101||changedStr.charCodeAt(i)===105||changedStr.charCodeAt(i)===101||changedStr.charCodeAt(i)===111||changedStr.charCodeAt(i)===117) {
+            changedStr.toUpperCase();
+        }
+    }
+    return changedStr;
+}
