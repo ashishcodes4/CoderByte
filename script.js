@@ -15,3 +15,14 @@ function factorial(num) {
 
 
 // 3.) For this challenge you will be reversing a string.
+function reverseString(str){
+    let strArray = str.split(" ");
+    let revStr = strArray.reverse();
+    let joinArr = revStr.join(" ");
+    return joinArr;
+
+    //or you could use method chaininf to reduce the code, 
+    return str.split(" ").reverse().join(" ");
+}
+
+// we can reduce the amount of code simply by using methode chaining...
