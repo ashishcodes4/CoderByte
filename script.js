@@ -1,4 +1,4 @@
-// Lok for solution... feel to make changes and submit pull request, if you find something worth changing to make the performance any better. 
+// Look for solution... feel to make changes and submit pull request, if you find something worth changing to make the performance any better. 
 
 // 1.) Calculate the factorila of any given number. 
 function factorial(num) {
@@ -32,7 +32,7 @@ function LetterChanges(str){
     let changedStr = "";
     for(i=0;i<=str.length;i++){
         if(97 <= str.charCodeAt(i) && str.charCodeAt(i) <= 121){
-            changedStr = str.replace(charCodeAt(i), String.fromCharCode(str.charCodeAt(i) + 1));
+            changedStr = str.replace(str.charCodeAt(i), String.fromCharCode(str.charCodeAt(i) + 1));
         } else if (str.charCodeAt(i)=== 122) {
             changedStr = str.replace(str.charCodeAt(i), str.charCodeAt(95));
         }
