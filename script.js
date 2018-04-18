@@ -31,8 +31,8 @@ function reverseString(str){
 function LetterChanges(str){
     let changedStr = "";
     for(i=0;i<=str.length;i++){
-        if(str.charCodeAt(i) > 94 && str.charCodeAt(i) < 122){
-            changedStr = str.replace(charCodeAt(i), String.fromCharCode(i+1));
+        if(97 <= str.charCodeAt(i) && str.charCodeAt(i) <= 121){
+            changedStr = str.replace(charCodeAt(i), String.fromCharCode(str.charCodeAt(i) + 1));
         } else if (str.charCodeAt(i)=== 122) {
             changedStr = str.replace(str.charCodeAt(i), str.charCodeAt(95));
         }
@@ -44,3 +44,4 @@ function LetterChanges(str){
     }
     return changedStr;
 }
+
